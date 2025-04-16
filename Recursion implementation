@@ -1,0 +1,13 @@
+def gcd(a, b):
+    # Base case: if b is 0, the GCD is a
+    if b == 0:
+        return a
+    
+    # Recursive case: GCD(a, b) = GCD(b, a % b)
+    return gcd(b, a % b)
+
+# Example usage
+test_cases = [(48, 18), (54, 24), (7, 13), (0, 5), (28, 0)]
+for a, b in test_cases:
+    result = gcd(a, b)
+    print(f"GCD({a}, {b}) = {result}")
